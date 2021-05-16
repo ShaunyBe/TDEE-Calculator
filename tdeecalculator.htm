@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+    <html>
+
+        <head>
+            <title>TDEE Calculator</title>
+
+            <!--Normalize.css-->
+            <link rel="stylesheet" type="text/css" href="/Users/shaunbeukman/Desktop/Websites/sbc/normalize.css">
+
+            <!--Custom Styles-->
+            <link rel="stylesheet" type="text/css" href="style.css">
+
+        </head>
+            <body>
+
+                <div id="container">
+                    <h1>TDEE Calculator</h1>
+
+                    <div id="calculator">
+
+                        <form>
+                            <label>
+                                Weight<br>
+                                <input type="number" id="weight" placeholder="kg">
+                            </label>
+                            <label>
+                                Height<br>
+                                <input type="number" id="height" placeholder="cm">
+                            </label>
+                            <label>
+                                Age<br>
+                                <input type="number" id="age">
+                            </label>
+                            <label>
+                                Sex<br>
+                                <select id="sex">
+                                    <option disabled selected value="0">-- Choose an option --</option>
+                                    <option value="5">Male</option>
+                                    <option value="-161">Female</option>
+                                </select>
+                            </label>
+                            <label>
+                                Activity Multiplier<br>
+                                <select id="activityMultiplier">
+                                    <option disabled selected value="0">-- Choose an option --</option>
+                                    <option value="1.2">Sedentary</option>
+                                    <option value="1.375">Lightly active(light exercise/sports 1-3 days/week)</option>
+                                    <option value="1.55">Moderately active(moderate exercise/sports 3-5 days/week)</option>
+                                    <option value="1.725">Very active(hard exercise/sports 6-7 days/week)</option>
+                                    <option value="1.9">Extra active(very hard exercise/sports & a physical job)</option>
+                                </select>
+                            </label>
+                            <label>
+                                Desired goal
+                                <select id="desiredGoal">
+                                    <option value="1">Maintain</option>
+                                    <option value="1.2">Bulk</option>
+                                    <option value="0.2">Cut</option>
+                                </select>
+                            </label>
+                            <button type="button" id="calculate">Calculate</button>
+                        </form>
+
+
+                    </div><!--calculator-->
+                    <div id="results">
+                        <p>Protein: </p><span id="proteinGram"></span><p>g</p>
+                        <p>Fats: </p><span id="fatsGram"></span><p>g</p>
+                        <p>Carbs: </p><span id="carbsGram"></span><p>g</p>
+                        <p>Total: </p><span id="totalCal"></span><p>cals</p>
+                    </div>
+                </div><!--container-->
+
+
+                <script type="text/javascript" src="script.js"></script>
+            </body>
+    </html>
