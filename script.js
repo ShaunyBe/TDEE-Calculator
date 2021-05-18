@@ -1,41 +1,53 @@
 // Custom function
+'use strict';
+
+
+
 function calculateTotal() {
 
     // store the data of inputs
-    var weight = document.getElementById("weight").value;
-    var height = document.getElementById("height").value;
-    var age = document.getElementById("age").value;
-    var sex = document.getElementById("sex").value;
-    var activity = document.getElementById("activityMultiplier").value;
-    var goal = document.getElementById("desiredGoal").value;
+    const weight = document.getElementById("weight").value;
+    const height = document.getElementById("height").value;
+    const age = document.getElementById("age").value;
+    const sex = document.getElementById("sex").value;
+    const activity = document.getElementById("activityMultiplier").value;
+    const goal = document.getElementById("desiredGoal").value;
+	
 
     //Quick validation
-    if(weight === "" || height === "" || age === "" || sex == 0 || activityMultiplier == 0 || desiredGoal == 0) {
-        window.alert("Please eneter some values to get a result");
+    if(weight === "" || height === "" || age === "" || sex === 0 || activity === 0 || goal === 0) {
+        window.alert("Please enter some values to get a result");
         return; 
     }
 
 
-    // Do some math
-    var cals = ((10 * weight) + (6.25 * height) - (5 * age) + activityMultiplier) * desiredGoal;
+    // Math to work out total calories, as well as protein, carbohydrates and fats in grams for your goal
+    let cals = ((((10 * weight) + (6.25 * height) - (5 * age)) * activity) * goal);
     cals = Math.round(cals * 100)/100;
-    cals = cals.toFixed(2);
-	var protein = weight * 2.2;
-	var fats = ((cals - (cals * (25/100)) / 9));
-	var carbs = (cals - ((protain * 4) + (fats * 9)));
-				
- 
+    cals = cals.toFixed(0);
+	let protein = weight * 2.2;
+	protein = Math.round(protein * 100)/100;
+	protein = protein.toFixed(0)
+	let fats = ((cals * 0.25) / 9);
+	fats = Math.round(fats * 100)/100;
+	fats = fats.toFixed(0)
+	let carbs = ((cals - ((protein * 4) + (fats * 9))) / 4);
+	carbs = Math.round(carbs * 100)/100;
+	carbs = carbs.toFixed(0)
+	
 
     // Display the results
-    document.getElementById("results").style.display = "block";
-    document.getElementById("proteinGram").innerHTML = protein;
-    document.getElementById("fatsGram").innerHTML = fats;
-    document.getElementById("carbsGram").innerHTML = carbs;
-    document.getElementById("totalCal").innerHTML = cals;
+    document.getElementById("results").style.display = "inline";
+    document.getElementById("proteinGram").innerHTML = `${protein} g`;
+    document.getElementById("fatsGram").innerHTML = `${fats} g`;
+    document.getElementById("carbsGram").innerHTML = `${carbs} g`;
+    document.getElementById("totalCal").innerHTML = `${cals} calories`;
 }
 
 // Hide results amount on load
 document.getElementById("results").style.display = "none";
 
 //Clicking the button calls our custom function
-document.getElementById("calculate").onclick = function() { calculateTotal(); };
+document.getElementById("calculate").onclick = function() { calculateTotal(); 
+
+};

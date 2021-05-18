@@ -3,10 +3,6 @@
 
         <head>
             <title>TDEE Calculator</title>
-
-            <!--Normalize.css-->
-            <link rel="stylesheet" type="text/css" href="/Users/shaunbeukman/Desktop/Websites/sbc/normalize.css">
-
             <!--Custom Styles-->
             <link rel="stylesheet" type="text/css" href="style.css">
 
@@ -21,7 +17,7 @@
                         <form>
                             <label>
                                 Weight<br>
-                                <input type="number" id="weight" placeholder="kg">
+                                <input type="number" id="weight" placeholder="kg" autofocus>
                             </label>
                             <label>
                                 Height<br>
@@ -53,9 +49,14 @@
                             <label>
                                 Desired goal
                                 <select id="desiredGoal">
+									<option disabled selected value="0">-- Choose an option --</option>
                                     <option value="1">Maintain</option>
-                                    <option value="1.2">Bulk</option>
-                                    <option value="0.2">Cut</option>
+									<option value="1.1">Bulk - 10% extra calories</option>
+									<option value="1.15">Bulk - 15% extra calories</option>
+                                    <option value="1.2">Bulk - 20% extra calories</option>
+									<option value="0.9">Cut - 10% less calories </option>
+									<option value="0.85">Cut - 15% less calories</option>
+                                    <option value="0.8">Cut - 20% less calories</option>
                                 </select>
                             </label>
                             <button type="button" id="calculate">Calculate</button>
@@ -64,10 +65,10 @@
 
                     </div><!--calculator-->
                     <div id="results">
-                        <p>Protein: </p><span id="proteinGram"></span><p>g</p>
-                        <p>Fats: </p><span id="fatsGram"></span><p>g</p>
-                        <p>Carbs: </p><span id="carbsGram"></span><p>g</p>
-                        <p>Total: </p><span id="totalCal"></span><p>cals</p>
+                        <p>Protein: </p><span id="proteinGram"></span><br>
+                        <p>Fats: </p><span id="fatsGram"></span><br>
+                        <p>Carbs: </p><span id="carbsGram"></span><br>
+                        <p>Total: </p><span id="totalCal"></span>
                     </div>
                 </div><!--container-->
 

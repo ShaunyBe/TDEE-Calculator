@@ -5,7 +5,7 @@ body, html {
 
 body {
     background-color: black;
-    color: rgb(255, 81, 0);
+    color: black;
 }
 
 #container {
@@ -13,7 +13,7 @@ body {
     margin: 10px auto 0;
     padding: 50px;
     box-sizing: border-box;
-    background-color: darkslategray;
+    background-color: white;
     box-shadow: 0 10px 15px -8px #000;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
@@ -42,6 +42,13 @@ form select {
     padding: 8px;
     margin: 10px 0;
     border-radius: 5px;
+	background-color: rgba(0, 0, 0, 0.8);
+	color: white;
+	text-align: center;
+}
+form input:hover, form select:hover {
+	background-color: crimson;
+	cursor: pointer;
 }
 
 form input[type="number"] {
@@ -53,7 +60,10 @@ form select {
 }
 
 button {
-    background: #33266c;
+	background-image: url('/button.png');
+   	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
     color: white;
     border: none;
     border-bottom: solid 4px #222;
@@ -61,32 +71,39 @@ button {
     font-size: 18px;
     padding: 20px 30px;
     width: 100%;
-    border-radius: 5px;
+    border-radius: 20px;
 }
 
 button:hover {
-    background: #1ac228;
+	box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.8);
     border-bottom-color: #111;
+	cursor: pointer;
 }
 
 button:active {
     position: relative;
-    top: 1px;
+    top: 2px;
 }
 
 #results {
-    display: inline-block;
+    display: inline;
 }
 
 #results:before {
     font-size: 14px;
     font-weight: bold;
-    display: block;
+    display: inline;
     text-transform: uppercase;
 }
 
 #results p {
     font-size: 16px;
-    text-align: left;
+    text-align: center;
+}
+
+#results span {
+	font-size: 28px;
+	font-weight: bold;
+	background-color: yellow;
 }
 
