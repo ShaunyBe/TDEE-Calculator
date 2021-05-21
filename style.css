@@ -65,11 +65,12 @@ button {
    	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
+	background-color: rgba(0, 0, 0, 0.8);
     color: white;
     border: none;
     border-bottom: solid 4px #222;
     text-transform: uppercase;
-    font-size: 18px;
+    font-size: 20px;
     padding: 20px 30px;
     width: 100%;
     border-radius: 20px;
