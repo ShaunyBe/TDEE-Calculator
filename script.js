@@ -21,7 +21,7 @@ function calculateTotal() {
     }
 
 
-    // Math to work out total calories, as well as protein, carbohydrates and fats in grams for your goal
+    // Math to work out total calories, as well as protein, carbohydrates and fats in grams for your goal using the Harris–Benedict equations revised by Mifflin and St Jeor in 1990.
     let cals = ((((10 * weight) + (6.25 * height) - (5 * age)) * activity) * goal);
     cals = Math.round(cals * 100)/100;
     cals = cals.toFixed(0);
