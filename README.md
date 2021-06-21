@@ -1,2 +1,2 @@
 # TDEE-Calculator
-A simple TDEE calculator predominately made with JavaScript as well as HTML5 and CSS3 that enables a user to work out their Total calorie intake for their specific goals as well as their individual protein, carbohydrate and fat macronutrients in grams.
+A simple TDEE calculator and 1 Rep Max calculator that are predominately made with JavaScript as well as HTML5 forms and CSS3 that enables a user to work out their Total calorie intake for their specific goals as well as their individual protein, carbohydrate and fat macronutrients in grams. The 1 Rep Max calculator allows a user to calculate their estimated weight that they would be able to lift for 1 rep by inputing a weight in kg and the amount of reps they can do with that weight.
