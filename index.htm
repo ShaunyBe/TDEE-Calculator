@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+    <html>
+
+        <head>
+			<meta charset="utf-8">
+        	<meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>TDEE Calculator</title>
+            <!--Custom Styles-->
+            <link rel="stylesheet" type="text/css" href="style.css">
+        </head>
+            <body>
+                <div class="topnav">
+                    <a class="active" href="index.htm">TDEE Calculator</a>
+                    <a href="1repmax.htm">1RM Calculator</a>
+                </div>
+                <div id="container">
+                    <h1>TDEE Calculator</h1>
+                    <div id="calculator">
+                        <form>
+                            <label>
+                                Weight<br>
+                                <input type="number" id="weight" placeholder="kg" autofocus>
+                            </label>
+                            <label>
+                                Height<br>
+                                <input type="number" id="height" placeholder="cm">
+                            </label>
+                            <label>
+                                Age<br>
+                                <input type="number" id="age">
+                            </label>
+                            <label>
+                                Sex<br>
+                                <select id="sex">
+                                    <option disabled selected value="0">-- Choose an option --</option>
+                                    <option value="5">Male</option>
+                                    <option value="-161">Female</option>
+                                </select>
+                            </label>
+                            <label>
+                                Activity Multiplier<br>
+                                <select id="activityMultiplier">
+                                    <option disabled selected value="0">-- Choose an option --</option>
+                                    <option value="1.2">Sedentary</option>
+                                    <option value="1.375">Lightly active(light exercise/sports 1-3 days/week)</option>
+                                    <option value="1.55">Moderately active(moderate exercise/sports 3-5 days/week)</option>
+                                    <option value="1.725">Very active(hard exercise/sports 6-7 days/week)</option>
+                                    <option value="1.9">Extra active(very hard exercise/sports & a physical job)</option>
+                                </select>
+                            </label>
+                            <label>
+                                Desired goal
+                                <select id="desiredGoal">
+									<option disabled selected value="0">-- Choose an option --</option>
+                                    <option value="1">Maintain</option>
+									<option value="1.1">Bulk - 10% extra calories</option>
+									<option value="1.15">Bulk - 15% extra calories</option>
+                                    <option value="1.2">Bulk - 20% extra calories</option>
+									<option value="0.9">Cut - 10% less calories </option>
+									<option value="0.85">Cut - 15% less calories</option>
+                                    <option value="0.8">Cut - 20% less calories</option>
+                                </select>
+                            </label>
+                            <button type="button" id="calculate">Calculate</button>
+                        </form>
+                    </div><!--calculator-->
+                    <div id="results">
+                        <p>Protein: </p><span id="proteinGram"></span><br>
+                        <p>Fats: </p><span id="fatsGram"></span><br>
+                        <p>Carbs: </p><span id="carbsGram"></span><br>
+                        <p>Total: </p><span id="totalCal"></span>
+                    </div>
+                </div><!--container-->
+				<div class="creator">
+					<p>Created by Shaun Beukman &copy;</p>
+				</div>
+                <script type="text/javascript" src="script.js"></script>
+            </body>
+    </html>

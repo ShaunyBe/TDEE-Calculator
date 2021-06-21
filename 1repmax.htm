@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>1Rep Max</title>
+    <!--Custom Styles-->
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <div class="topnav">
+        <a class="active" href="index.htm">TDEE Calculator</a>
+        <a href="1repmax.htm">1RM Calculator</a>
+    </div>
+    <div id="container">
+      <h1>1Rep Max Calculator</h1>
+      <div id="calculator">
+        <form>
+          <label>
+            Weight<br />
+            <input type="number" id="weight" placeholder="kg" autofocus />
+          </label>
+          <label>
+            Reps<br />
+            <input type="number" id="reps" placeholder="Number of reps" />
+          </label>
+          <button type="button" id="calculate">Calculate</button>
+        </form>
+      </div>
+      <!--calculator-->
+      <div id="results">
+        <p>Your one rep max is:</p>
+        <span id="1repmax"></span><br />
+      </div>
+    </div>
+    <!--container-->
+    <div class="creator">
+      <p>Created by Shaun Beukman &copy;</p>
+    </div>
+    <script type="text/javascript" src="1rm.js"></script>
+  </body>
+</html>

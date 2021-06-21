@@ -8,10 +8,40 @@ body {
     color: black;
 }
 
+.topnav {
+    background-color: black;
+    overflow: hidden;
+}
+
+.topnav a {
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    
+}
+
+.topnav a:hover {
+    background-color: crimson;
+    color: black;
+}
+
+/* .topnav a.active {
+    background-color: gold;
+    color: white;
+} */
+
+.topnav a.active:hover {
+    background-color: crimson;
+    color: black;
+}
+
 #container {
     width: 50%;
     margin: 10px auto 0;
-    padding: 50px;
+    padding: 30px;
     box-sizing: border-box;
     background-color: white;
     box-shadow: 0 10px 15px -8px #000;
@@ -26,6 +56,12 @@ h1 {
     margin: 0 0 10px;
     padding: 0 0 10px;
     border-bottom: solid 1px #ddd;
+}
+
+@media screen and (max-width: 500px) {
+	h1 {
+		font-size: 20px;
+	}
 }
 
 form {
@@ -87,6 +123,12 @@ button:active {
     top: 2px;
 }
 
+
+@media screen and (max-width: 500px) {
+	button {
+		font-size: 12px
+	}
+}
 #results {
     display: inline;
 }
@@ -109,7 +151,12 @@ button:active {
 	background-color: yellow;
 	padding: 10px;
 	border-radius: 20px;
-	
+}
+
+@media screen and (max-width: 500px) {
+	#results span {
+		font-size: 18px
+	}
 }
 
 .creator {
@@ -121,3 +168,19 @@ button:active {
 	padding: 5px;
 }
 
+/* .tabcontent {
+    display: none;
+}
+
+button.tablink {
+   width: 50%;
+   margin-left: 25%;
+   margin-top: 10px;
+   background-image: none;
+   background-color: #222;
+   border-bottom: solid 4px #333;
+}
+
+button.tablink:hover {
+    background-color: crimson;
+} */
